@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+  <body class="body">
+    <nav class="black">
+        <ul>  
+            <li><a href="">CALCULATOR</a></li>           
+            <li class="man"><a  href=""><i class="ri-moon-line"></i></a></i></li>
+        </ul>
+    </nav>
+    <div id="fake"></div>
+    <div id="container">
+
+    <div id="box">
+      <input type="text" id="bad">
+      <div class="box1">
+       <button onclick="fun(1)">1</button>
+       <button onclick="fun(2)">2</button>
+       <button onclick="fun(3)">3</button>
+       <button onclick="sun()">=</button>
+      </div>
+      <div class="box1">
+        <button onclick="fun(4)">4</button>
+        <button onclick="fun(5)">5</button>
+        <button onclick="fun(6)">6</button>
+        <button onclick="fun('+')">+</button>
+       </div>
+       <div class="box1">
+        <button onclick="fun(7)">7</button>
+        <button onclick="fun(8)">8</button>
+        <button onclick="fun(9)">9</button>
+        <button onclick="fun('-')">-</button>
+       </div>
+       <div class="box1">
+        <button onclick="fun('*')">*</button>
+        <button onclick="gun()">c</button>
+        <button onclick="fun(0)">0</button>
+        <button onclick="fun('/')">/</button>
+       </div>
+    </div>
+  </div>
+    <script>
+       let x=document.querySelector(".black");
+    let y=document.querySelector(".body");
+    let z=document.querySelector(".man");
+    
+    let b=document.querySelector(".input");
+    let c=document.querySelector(".para");
+    z.addEventListener("click",function(){
+        x.style.backgroundColor="black";
+        y.style.backgroundColor="black";
+        z.style.border="2px solid white";
+        x.style.border="2px solid white";
+    });
+      let a=document.querySelector("#bad")
+        function fun(show){
+           a.value+=show;
+        }
+        function sun(){
+          a.value=eval(a.value)
+        }
+        function gun(){
+          a.value=``;
+        }
+
+    </script>
+   
+</body>
+</html>
